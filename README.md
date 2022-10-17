@@ -9,4 +9,5 @@ This _printf() function produces output according to a format which is described
 The available convertion specifiers are:
 
 %c: Prints a single character
+
 %s: Prints a string of characters.
