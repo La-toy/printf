@@ -1,5 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <limits.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -15,8 +17,8 @@
 #define NEG_FLAG 16
 
 /* SIZES */
-#define SHORT 1
-#define LONG 2
+#define S_LONG 2
+#define S_SHORT 1
 
 /**
  * struct fmt  - Struct op
@@ -26,14 +28,13 @@
  */
 struct fmt
 {
-	char fmt
-		;
-	int (*fn)va_list, char[], int, int, int, int);
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
- * typedef struct fmt fmt_t -struct op
+ *typedef struct fmt fmt_t - Struct op
  *
  * @fmt: The format.
  * @fm_t: The function associated.
@@ -41,8 +42,8 @@ struct fmt
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *fat, int *i,
-va_list list, char buffer[]. int flags, int width, int precision, int size);
+int handle_print(const char *fmt, int *i,
+va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /******************** FUNCTIONS ********************/
 
@@ -101,7 +102,7 @@ char buffer[],
 
 /****************** UTILS ********************/
 int is_printable(char);
-int append_hexa_code(char,char[], int);
+int append_hexa_code(char, char[], int);
 int is_digit(char);
 
 long int convert_size_number(long int num, int size);
