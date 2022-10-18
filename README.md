@@ -15,8 +15,12 @@ This _printf() function produces output according to a format which is described
 ## Conversion Specifiers
 The available convertion specifiers are:
 
-%c: Prints a single character
+* %c: Prints a single character
 
-%s: Prints a string of characters.
+* %s: Prints a string of characters.
 
-%% Prints % character.
+* %%: Prints % character.
+
+* %d: Prints signed integer
+
+* %i Prints unsigned integer
