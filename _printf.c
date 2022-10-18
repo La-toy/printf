@@ -3,7 +3,7 @@
 /**
  * _printf - Receives the main string and all the necessary parameters
  * @format: A string containing all the desired characters
- * Return: A total count of the characters printed
+ * Return: Success 0 and Failure -1
  */
 
 int _printf(const char *format, ...)
@@ -28,7 +28,9 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
+
 	va_start(arg_list, format);
+
 	/*Calling parser function*/
 	printed_chars = parser(format, f_list, arg_list);
 	va_end(arg_list);
