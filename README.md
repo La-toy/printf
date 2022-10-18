@@ -23,4 +23,4 @@ The available convertion specifiers are:
 
 * %d: Prints signed integer
 
-* %i Prints unsigned integer
+* %i: Prints unsigned integer
