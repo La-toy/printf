@@ -24,3 +24,15 @@ The available convertion specifiers are:
 * %d: Prints signed integer
 
 * %i: Prints unsigned integer
+
+* %b: Prints the binary representation of an usigned decimal
+
+* %u: Prints unsigned integers
+
+* %x: Prints the hexadecimal representation of an unsigned decimcal in lowercase string
+
+* %X: Prints the hexadecimal representation of an unsigned decimal in uppercase string
+
+* %r: Prints a string in reverse
+
+* %R: Prints the Rot13 interpretation of a string
